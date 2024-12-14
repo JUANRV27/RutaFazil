@@ -1,3 +1,4 @@
+import os
 import networkx as nx
 import pandas as pd
 import plotly.graph_objects as go
@@ -5,11 +6,16 @@ import dash
 from dash import dcc, html, Input, Output
 import dash_bootstrap_components as dbc
 
+# Paso 1: Obtener la ruta del archivo actual
+current_dir = os.path.dirname(__file__)
+lima_streets_nodes = os.path.join(current_dir, '..', 'data', 'lima_streets_nodes.csv')
+lima_streets_nodes_classified = os.path.join(current_dir, '..', 'data', 'lima_streets_nodes_classified.csv')
+lima_streets_edges_2 = os.path.join(current_dir, '..', 'data', 'lima_streets_edges_2.csv')
 # Cargar datos
 try:
-    nodes_ids_df = pd.read_csv('lima_streets_nodes.csv')  # Datos de los nodos con id
-    nodes_types_df = pd.read_csv('lima_streets_nodes_classified.csv')  # Datos de los nodos con tipo
-    edges_df = pd.read_csv('lima_streets_edges_2.csv')  # Datos de las aristas
+    nodes_ids_df = pd.read_csv(lima_streets_nodes)  # Datos de los nodos con id
+    nodes_types_df = pd.read_csv(lima_streets_nodes_classified)  # Datos de los nodos con tipo
+    edges_df = pd.read_csv(lima_streets_edges_2)  # Datos de las aristas
 except FileNotFoundError as e:
     print(f"Error al cargar los datos: {e}")
     raise

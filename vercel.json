@@ -1,5 +1,13 @@
 {
     "version": 2,
-    "builds": [{ "src": "api/RutaFazil.py", "use": "@vercel/python" }],
-    "routes": [{ "src": "/(.*)", "dest": "api/RutaFazil.py" }]
-}
+    "builds": [
+      {
+        "src": "api/RutaFazil.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      { "src": "/(.*)", "dest": "api/RutaFazil.py" }
+    ]
+  }
+  

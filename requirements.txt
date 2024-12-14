@@ -1,10 +1,11 @@
+pandas
+plotly
+dash
+networkx
 dash==2.12.1
 dash-core-components==2.0.0
 dash-html-components==2.0.0
 dash-bootstrap-components==1.1.0
 flask==2.2.3
-pandas
-plotly
-dash
-networkx
+
 

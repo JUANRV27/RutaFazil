@@ -4,7 +4,7 @@ import plotly.graph_objects as go
 import dash_bootstrap_components as dbc
 import networkx as nx
 from flask import Flask
-from process_data import load_data
+from api.process_data import load_data
 
 
 # ---------------- SERVER ----------------

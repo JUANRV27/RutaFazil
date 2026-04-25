@@ -1,0 +1,162 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #020617;
+    color: #e2e8f0;
+}
+
+/* LAYOUT */
+.main-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 320px;
+    min-width: 320px;
+    height: 100vh;
+    background: linear-gradient(180deg, #020617, #0f172a);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    animation: slideIn 0.4s ease;
+}
+
+/* HEADER */
+.sidebar-header {
+    margin-bottom: 10px;
+}
+
+.app-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #38bdf8;
+}
+
+.app-subtitle {
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+/* INPUTS */
+.inputs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.input-label {
+    font-size: 12px;
+    color: #cbd5f5;
+}
+
+/* Dropdown */
+.dropdown {
+    border-radius: 10px;
+}
+
+/* BOTONES */
+.btn-main {
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-main:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+}
+
+/* RESULTADOS */
+.results-box {
+    margin-top: auto;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    animation: fadeIn 0.4s ease;
+}
+
+/* STATS */
+.stats-grid {
+    display: flex;
+    gap: 10px;
+}
+
+.stat-box {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.04);
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.stat-val {
+    font-size: 18px;
+    font-weight: 700;
+    color: #38bdf8;
+}
+
+.stat-lbl {
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+/* MAPA */
+.map-area {
+    flex: 1;
+    height: 100vh;
+    position: relative;
+    display: flex;
+}
+
+/* FIX para que Dash no rompa layout */
+.map-area>div {
+    width: 100% !important;
+}
+
+/* TIP flotante */
+.map-tip {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: white;
+    font-size: 12px;
+    backdrop-filter: blur(8px);
+}
+
+/* ANIMACIONES */
+@keyframes slideIn {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

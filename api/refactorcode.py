@@ -53,7 +53,7 @@ def build_base_map():
         mode='markers',
         lon=NODE_LONS,
         lat=NODE_LATS,
-        marker=dict(size=4, opacity=0.8, color="gray"),
+        marker=dict(size=4, opacity=0.0, color="gray"),
         hovertemplate="Nodo %{text}<extra></extra>",
         text=NODE_IDS
     )
